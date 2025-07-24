@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FacultySidebar from "../components/FacultySidebar";
 import TopNav from "../components/TopNav";
-
+import { BASE_URL } from '../config';
 const FacultyDashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 

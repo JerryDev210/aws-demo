@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/ManageStudents.css"; 
-
+import { BASE_URL } from '../config';
 const ManageStudents = () => {
   const [students, setStudents] = useState([]);
   const [departments, setDepartments] = useState([]);

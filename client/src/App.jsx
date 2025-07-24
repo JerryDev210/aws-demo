@@ -14,7 +14,6 @@ import './App.css';
 import './styles/profile.css'; 
 import './App2.css'; // Add this impor
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },

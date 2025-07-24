@@ -4,7 +4,7 @@ import axios from 'axios';
 import Sidebar from "../components/Sidebar";
 import TopNav from "../components/TopNav";
 import Profile from "../components/Profile";
-
+import { BASE_URL } from '../config';
 const StudentProfile = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     const [studentData, setStudentData] = useState({});

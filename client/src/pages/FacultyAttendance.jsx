@@ -4,7 +4,7 @@ import FacultySidebar from "../components/FacultySidebar";
 import TopNav from "../components/TopNav";
 import axios from 'axios';
 // import '../styles/FacultyAttendance.css';
-
+import { BASE_URL } from '../config';
 const FacultyAttendance = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [courses, setCourses] = useState([]);

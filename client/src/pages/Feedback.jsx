@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import TopNav from "../components/TopNav";
-
+import { BASE_URL } from '../config';
 export default function Feedback() {
   const [feedbackData, setFeedbackData] = useState({
     category: "general",

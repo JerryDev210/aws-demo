@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Login.css";
-
+import { BASE_URL } from '../config';
 const Login = ({ isAdmin = false, isFaculty = false }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

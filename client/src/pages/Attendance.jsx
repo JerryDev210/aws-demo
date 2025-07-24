@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Sidebar from "../components/Sidebar";
 import TopNav from "../components/TopNav";
 import axios from 'axios';
-
+import { BASE_URL } from '../config';
 const Attendance = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     const [attendanceData, setAttendanceData] = useState([]);
