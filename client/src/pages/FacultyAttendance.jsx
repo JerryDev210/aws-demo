@@ -34,7 +34,7 @@ const FacultyAttendance = () => {
         }
 
         console.log('Making API request to fetch courses');
-        const response = await axios.get('${BASE_URL}/faculty/courses', {
+        const response = await axios.get(`${BASE_URL}/faculty/courses`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -136,7 +136,7 @@ const FacultyAttendance = () => {
         }))
       };
 
-      await axios.post('${BASE_URL}/faculty/mark-attendance', attendanceData, {
+      await axios.post(`${BASE_URL}/faculty/mark-attendance`, attendanceData, {
         headers: { Authorization: `Bearer ${token}` }
       });
 

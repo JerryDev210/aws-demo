@@ -30,7 +30,7 @@ const ManageStudents = () => {
     try {
       setLoading(true);
       setError(null);
-      const response = await fetch("${BASE_URL}/students", {
+      const response = await fetch(`${BASE_URL}/students`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -53,7 +53,7 @@ const ManageStudents = () => {
   // Function to fetch departments
   const fetchDepartments = async () => {
     try {
-      const response = await fetch("${BASE_URL}/departments", {
+      const response = await fetch(`${BASE_URL}/departments`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -106,7 +106,7 @@ const ManageStudents = () => {
       // Determine if we're adding or editing
       const url = isEditing 
         ? `${BASE_URL}/students/${editingId}`
-        : "${BASE_URL}/add-student";
+        : `${BASE_URL}/add-student`;
       
       const method = isEditing ? "PUT" : "POST";
       
