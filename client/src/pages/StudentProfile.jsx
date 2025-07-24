@@ -23,7 +23,7 @@ const StudentProfile = () => {
                 }
                 
                 // Use student profile endpoint instead of generic profile
-                const response = await axios.get('http://localhost:5000/student/profile', {
+                const response = await axios.get('${BASE_URL}/student/profile', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

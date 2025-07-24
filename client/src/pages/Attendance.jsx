@@ -21,7 +21,7 @@ const Attendance = () => {
                     return;
                 }
                 
-                const response = await axios.get('http://localhost:5000/student/attendance', {
+                const response = await axios.get('${BASE_URL}/student/attendance', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 

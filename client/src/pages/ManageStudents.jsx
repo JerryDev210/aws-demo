@@ -30,7 +30,7 @@ const ManageStudents = () => {
     try {
       setLoading(true);
       setError(null);
-      const response = await fetch("http://localhost:5000/students", {
+      const response = await fetch("${BASE_URL}/students", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -53,7 +53,7 @@ const ManageStudents = () => {
   // Function to fetch departments
   const fetchDepartments = async () => {
     try {
-      const response = await fetch("http://localhost:5000/departments", {
+      const response = await fetch("${BASE_URL}/departments", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -105,8 +105,8 @@ const ManageStudents = () => {
       
       // Determine if we're adding or editing
       const url = isEditing 
-        ? `http://localhost:5000/students/${editingId}`
-        : "http://localhost:5000/add-student";
+        ? `${BASE_URL}/students/${editingId}`
+        : "${BASE_URL}/add-student";
       
       const method = isEditing ? "PUT" : "POST";
       
@@ -161,7 +161,7 @@ const ManageStudents = () => {
     try {
       setLoading(true);
       
-      const response = await fetch(`http://localhost:5000/students/${studentId}`, {
+      const response = await fetch(`${BASE_URL}/students/${studentId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -212,7 +212,7 @@ const ManageStudents = () => {
     try {
       setLoading(true);
       
-      const response = await fetch(`http://localhost:5000/students/${studentToDelete.student_id}`, {
+      const response = await fetch(`${BASE_URL}/students/${studentToDelete.student_id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

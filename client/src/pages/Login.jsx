@@ -25,11 +25,11 @@ const Login = ({ isAdmin = false, isFaculty = false }) => {
 
     try {
       // Determine which endpoint to call based on login type
-      let endpoint = "http://localhost:5000/login"; // Default student login
+      let endpoint = "${BASE_URL}/login"; // Default student login
       if (isAdmin) {
-        endpoint = "http://localhost:5000/admin/login";
+        endpoint = "${BASE_URL}/admin/login";
       } else if (isFaculty) {
-        endpoint = "http://localhost:5000/faculty/login";
+        endpoint = "${BASE_URL}/faculty/login";
       }
       
       // Send POST request to the server for login validation

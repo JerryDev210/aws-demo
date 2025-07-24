@@ -72,7 +72,7 @@ const Profile = ({ userType, userData = {}, onProfileUpdate }) => {
       }
       
       const endpoint = userType === 'faculty' ? '/faculty/profile' : '/student/profile';
-      const response = await axios.put(`http://localhost:5000${endpoint}`, {
+      const response = await axios.put(`${BASE_URL}${endpoint}`, {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,

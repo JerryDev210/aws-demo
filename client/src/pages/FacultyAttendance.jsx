@@ -34,7 +34,7 @@ const FacultyAttendance = () => {
         }
 
         console.log('Making API request to fetch courses');
-        const response = await axios.get('http://localhost:5000/faculty/courses', {
+        const response = await axios.get('${BASE_URL}/faculty/courses', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -72,7 +72,7 @@ const FacultyAttendance = () => {
     
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://localhost:5000/faculty/course/${courseId}/students`, {
+      const response = await axios.get(`${BASE_URL}/faculty/course/${courseId}/students`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -136,7 +136,7 @@ const FacultyAttendance = () => {
         }))
       };
 
-      await axios.post('http://localhost:5000/faculty/mark-attendance', attendanceData, {
+      await axios.post('${BASE_URL}/faculty/mark-attendance', attendanceData, {
         headers: { Authorization: `Bearer ${token}` }
       });
 

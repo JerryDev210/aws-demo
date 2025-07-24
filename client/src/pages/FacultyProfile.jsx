@@ -23,7 +23,7 @@ const FacultyProfile = () => {
                     return;
                 }
                 
-                const response = await axios.get('http://localhost:5000/faculty/profile', {
+                const response = await axios.get('${BASE_URL}/faculty/profile', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
